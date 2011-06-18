@@ -1,0 +1,13 @@
+(trigger
+    (key [[alt][shift][cmd]T]))
+
+(name [Run Tests])
+
+(input nothing)
+
+(output html)
+
+(save nothing)
+
+(script [export TM_TARGET="${TM_TEST_TARGET:-Test}"
+"${TM_BUNDLE_SUPPORT}/bin/run_xcodebuild.sh"])

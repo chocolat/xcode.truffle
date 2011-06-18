@@ -1,0 +1,1 @@
+(menu command.build-&-run command.build [command.run-(xcode-target)] command.run-tests command.clean --- command.open-project-in-xcode --- command.add-to-active-target command.list-files-in-active-target --- command.import-xcode-project… command.open-frontmost-xcode-project ---)

@@ -1,0 +1,20 @@
+(trigger)
+
+(name [Import Frontmost Project])
+
+(input nothing)
+
+(output tooltip)
+
+(save nothing)
+
+(script [# import the frontmost opened project window in Xcode
+
+source_path=$(osascript -e 'tell application "Xcode" to get the path of project 1')
+dest_path="${source_path%.*}.tmproj"
+
+# FIXME probably should move the old dest_path somewhere and only nuke it if the conversion is successful
+
+"$TM_BUNDLE_SUPPORT/bin/xcode_to_tmproj" "$source_path/project.pbxproj" "$dest_path" && open "$dest_path"
+
+])

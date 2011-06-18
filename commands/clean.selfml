@@ -1,0 +1,14 @@
+(trigger)
+
+(name Clean)
+
+(input nothing)
+
+(output html)
+
+(save project)
+
+(script [XCODE_BUILD_VERB="clean"
+export XCODE_BUILD_VERB
+"${TM_BUNDLE_SUPPORT}/bin/run_xcodebuild.sh"
+])

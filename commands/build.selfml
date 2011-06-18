@@ -1,0 +1,13 @@
+(trigger
+    (key [[cmd]B]))
+
+(name Build)
+
+(input nothing)
+
+(output html)
+
+(save project)
+
+(script ["${TM_BUNDLE_SUPPORT}/bin/run_xcodebuild.sh"
+])
